@@ -5,24 +5,26 @@
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
 	int i;
-	unsigned long int fibonacci[98];
+	unsigned long int a = 1;
+	unsigned long int b = 2;
+	unsigned long int next_fibonacci;
 
-	fibonacci[0] = 1;
-	fibonacci[1] = 2;
-	printf("%lu, %lu, ", fibonacci[0], fibonacci[1]);
+	printf("%lu, %lu, ", a, b);
 
 	for (i = 2; i < 98; i++)
 	{
-		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+		next_fibonacci = a + b;
+		a = b;
+		b = next_fibonacci;
+
 		if (i == 97)
-			printf("%lu\n", fibonacci[i]);
+			printf("%lu\n", next_fibonacci);
 		else
-			printf("%lu, ", fibonacci[i]);
+			printf("%lu, ", next_fibonacci);
 	}
 
-	return (0);
+	return 0;
 }
