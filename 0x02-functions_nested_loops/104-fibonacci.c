@@ -9,9 +9,10 @@ int main(void)
 {
 	int i;
 	unsigned long long int fib[98];
+
 	fib[0] = 1;
 	fib[1] = 2;
-	printf("%lu, %lu, ", fib[0], fib[1]);
+	printf("%llu, %llu, ", fib[0], fib[1]);
 
 	for (i = 2; i < 98; i++)
 	{
@@ -22,5 +23,5 @@ int main(void)
 	    printf("%llu, ", fib[i]);
 	}
 
-	return 0;
+	return (0);
 }
