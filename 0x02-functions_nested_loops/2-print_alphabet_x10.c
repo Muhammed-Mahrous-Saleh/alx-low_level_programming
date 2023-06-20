@@ -1,4 +1,3 @@
-#include <unistd.h>
 #include "main.h"
 
 
@@ -8,13 +7,16 @@
  * followed by a new line.
  * Return: Nothing.
  */
+
 void print_alphabet_x10(void)
 {
-	int i;
+	char i;
+	int j;
 
-	for (i = 0; i <= 10; i++)
+	for (j = 0; j < 10; j++)
 	{
-		print_alphabet();
+		for (i = 'a'; i <= 'z'; i++)
+			_putchar(i);
+		_putchar('\n');
 	}
 }
-
