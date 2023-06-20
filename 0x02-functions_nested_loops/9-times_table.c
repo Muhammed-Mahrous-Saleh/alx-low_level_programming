@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * times_table - Check description
+ * times_table - Check Description.
  * Description: It prints 9 times table starting with 0
  * Return: Nothing.
  */
