@@ -8,22 +8,18 @@
 int main(void)
 {
 	int i;
-	unsigned long int a = 1;
-	unsigned long int b = 2;
-	unsigned long int next_fibonacci;
-
-	printf("%lu, %lu, ", a, b);
+	unsigned long long int fib[98];
+	fib[0] = 1;
+	fib[1] = 2;
+	printf("%lu, %lu, ", fib[0], fib[1]);
 
 	for (i = 2; i < 98; i++)
 	{
-		next_fibonacci = a + b;
-		a = b;
-		b = next_fibonacci;
-
-		if (i == 97)
-			printf("%lu\n", next_fibonacci);
-		else
-			printf("%lu, ", next_fibonacci);
+	  fib[i] = fib[i - 1] + fib[i - 2];
+	  if (i == 97)
+	    printf("%llu\n", fib[i]);
+	  else
+	    printf("%llu, ", fib[i]);
 	}
 
 	return 0;
