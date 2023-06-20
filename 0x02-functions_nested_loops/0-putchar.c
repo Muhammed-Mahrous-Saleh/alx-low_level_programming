@@ -16,6 +16,6 @@ int main(void)
 	{
 		_putchar(outMes[i]);
 	}
-	_putcahr("\n");
+	_putchar('\n');
 	return (0);
 }
